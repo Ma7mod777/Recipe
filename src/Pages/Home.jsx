@@ -16,9 +16,10 @@ return axios.get("https://www.themealdb.com/api/json/v1/1/categories.php")
   }
 
 
- const {data , isLoading , error , isError} = useQuery({
+ const {data , isLoading , error , isError , refetch} = useQuery({
     queryKey : "Categories",
-    queryFn : getAllCategories
+    queryFn : getAllCategories,
+
   })
 
   // console.log(data?.data?.categories);
